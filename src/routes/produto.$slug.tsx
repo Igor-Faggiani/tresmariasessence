@@ -29,7 +29,7 @@ export const Route = createFileRoute("/produto/$slug")({
   component: ProductPage,
 });
 
-function Selector({ label, options, value, onChange }: { label: string; options: string[]; value?: string; onChange: (v: string) => void }) {
+function Selector({ label, options, value, onChange }: { label: string; options: string[]; value?: string | undefined; onChange: (v: string) => void }) {
   return (
     <fieldset className="mt-8">
       <legend className="eyebrow mb-3">
@@ -68,7 +68,7 @@ function ProductPage() {
   const valid = (!needsScent || scent) && (!needsModel || model);
   const size = p.volume ?? p.weight;
 
-  const item = () => ({ productId: p.id, name: p.name, price: p.price!, image: p.images[0], scent, model, quantity: qty });
+  const item = () => ({ productId: p.id, name: p.name, price: p.price!, image: p.images[0] ?? "", scent, model, quantity: qty });
   const guard = () => {
     setTried(true);
     return !!valid;

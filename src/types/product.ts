@@ -31,7 +31,7 @@ export interface CartItem {
   name: string;
   price: number;
   image: string;
-  scent?: string;
-  model?: string;
+  scent?: string | undefined;
+  model?: string | undefined;
   quantity: number;
 }
