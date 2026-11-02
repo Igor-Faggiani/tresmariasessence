@@ -50,7 +50,7 @@ export function Header() {
           <Menu className="size-5" strokeWidth={1.4} />
         </button>
         <Link to="/" aria-label="Três Marias — início" className="lg:-ml-2">
-          <Logo className="h-14 md:h-20" />
+          <Logo className="h-10 md:h-12" />
         </Link>
         <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
           {NAV.map((n) => (
@@ -89,7 +89,7 @@ export function Header() {
       {menu && (
         <div className="fixed inset-0 z-50 bg-background lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
           <div className="flex h-16 items-center justify-between px-4">
-            <Logo className="h-14" />
+            <Logo className="h-10" />
             <button className="grid size-11 place-items-center" aria-label="Fechar menu" onClick={() => setMenu(false)}>
               <X className="size-5" strokeWidth={1.4} />
             </button>

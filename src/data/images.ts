@@ -12,7 +12,7 @@ import p11 from "@/assets/photos/p11.jpg.asset.json";
 import p12 from "@/assets/photos/p12.jpg.asset.json";
 import p13 from "@/assets/photos/p13.jpg.asset.json";
 import p14 from "@/assets/photos/p14.jpg.asset.json";
-import p15 from "@/assets/photos/p15.jpg.asset.json";
+import p15 from "@/assets/photos/logo.jpg.asset.json";
 import p16 from "@/assets/photos/p16.jpg.asset.json";
 
 /** Fotografias reais da marca, centralizadas para futura troca por storage. */

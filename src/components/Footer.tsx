@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-secondary/60">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4 md:px-8">
         <div className="md:col-span-1">
-          <Logo className="h-24" />
+          <Logo className="h-16" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Body splashes, velas aromáticas, wax melts e kits para presentear.
           </p>
