@@ -1,5 +1,6 @@
 import type { Category, CategoryId, Product } from "@/types/product";
 import { img } from "./images";
+import { natalProducts } from "./natalProducts";
 
 const BODY_SCENTS = ["Vanilla", "Morango", "Good Girl"];
 const CANDLE_SCENTS = ["Vanilla", "Cereja e Avelã", "Café Verde"];
@@ -108,6 +109,6 @@ export const products: Product[] = [
   },
 ];
 
-export const getProductBySlug = (slug: string) => products.find((p) => p.slug === slug);
+export const getProductBySlug = (slug: string) => [...products, ...natalProducts].find((p) => p.slug === slug);
 export const getCategory = (id: CategoryId) => categories.find((c) => c.id === id)!;
 export const categoryIds = categories.map((c) => c.id);

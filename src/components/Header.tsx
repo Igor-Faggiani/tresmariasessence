@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import type { CategoryId } from "@/types/product";
 
-type NavItem = { label: string; to: "/" | "/produtos" | "/sobre"; categoria?: CategoryId };
+type NavItem = { label: string; to: "/" | "/produtos" | "/sobre" | "/especial-natal"; categoria?: CategoryId };
 export const NAV: NavItem[] = [
   { label: "Início", to: "/" },
   { label: "Produtos", to: "/produtos" },
@@ -15,7 +15,7 @@ export const NAV: NavItem[] = [
   { label: "Body Splash", to: "/produtos", categoria: "body-splash" },
   { label: "Kits", to: "/produtos", categoria: "kits" },
   { label: "Sobre nós", to: "/sobre" },
-  { label: "Especial - Natal", to: "/produtos", categoria: "body-splash"}
+  { label: "Especial - Natal", to: "/especial-natal" }
 ];
 
 export function NavLink({ item, onClick, className }: { item: NavItem; onClick?: () => void; className?: string }) {
