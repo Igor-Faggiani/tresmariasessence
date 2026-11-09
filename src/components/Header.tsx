@@ -15,6 +15,7 @@ export const NAV: NavItem[] = [
   { label: "Body Splash", to: "/produtos", categoria: "body-splash" },
   { label: "Kits", to: "/produtos", categoria: "kits" },
   { label: "Sobre nós", to: "/sobre" },
+  { label: "Especial - Natal", to: "/produtos", categoria: "body-splash"}
 ];
 
 export function NavLink({ item, onClick, className }: { item: NavItem; onClick?: () => void; className?: string }) {
