@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useCart } from "@/lib/cart";
 import { generalMessage, waLink } from "@/lib/whatsapp";
 import { Logo } from "./Logo";
@@ -37,10 +38,24 @@ export function Header() {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = menu ? "hidden" : "";
+    if (!menu) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenu(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [menu]);
 
   return (
+    <>
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8">
         <button
@@ -87,34 +102,41 @@ export function Header() {
         </div>
       </div>
 
-      {menu && (
-        <div className="fixed inset-0 z-50 bg-background lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
-          <div className="flex h-16 items-center justify-between px-4">
-            <Logo className="h-10" />
-            <button className="grid size-11 place-items-center" aria-label="Fechar menu" onClick={() => setMenu(false)}>
-              <X className="size-5" strokeWidth={1.4} />
-            </button>
-          </div>
-          <nav className="flex flex-col px-6 pt-8" aria-label="Menu móvel">
-            {NAV.map((n, i) => (
-              <NavLink
-                key={n.label}
-                item={n}
-                onClick={() => setMenu(false)}
-                className="fade-up border-b border-border py-4 font-serif text-3xl"
-              />
-            ))}
-            <a
-              href={waLink(generalMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-solid mt-10"
-            >
-              <WhatsAppIcon className="size-4" /> Fale conosco
-            </a>
-          </nav>
-        </div>
-      )}
     </header>
+    {menu && createPortal(
+      <div
+        className="fixed inset-0 z-[100] h-[100dvh] w-screen overflow-y-auto overscroll-contain bg-background lg:hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+      >
+        <div className="flex h-16 items-center justify-between border-b border-border/70 bg-background px-4">
+          <Logo className="h-10" />
+          <button className="grid size-11 place-items-center" aria-label="Fechar menu" onClick={() => setMenu(false)}>
+            <X className="size-5" strokeWidth={1.4} />
+          </button>
+        </div>
+        <nav className="flex flex-col px-6 pt-5 pb-8" aria-label="Menu móvel">
+          {NAV.map((n) => (
+            <NavLink
+              key={n.label}
+              item={n}
+              onClick={() => setMenu(false)}
+              className="fade-up border-b border-border py-4 font-serif text-3xl"
+            />
+          ))}
+          <a
+            href={waLink(generalMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-solid mt-8"
+          >
+            <WhatsAppIcon className="size-4" /> Fale conosco
+          </a>
+        </nav>
+      </div>,
+      document.body
+    )}
+    </>
   );
 }
