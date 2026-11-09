@@ -14,6 +14,8 @@ import p13 from "@/assets/photos/p13.jpeg";
 import p14 from "@/assets/photos/p14.jpeg";
 import p15 from "@/assets/photos/logo.jpeg";
 import p16 from "@/assets/photos/p16.jpeg";
+import p17 from "@/assets/photos/p17.jpeg";
+import p18 from "@/assets/photos/p18.jpeg";
 
 /** Fotografias reais da marca, centralizadas para futura troca por storage. */
 export const img = {
@@ -33,4 +35,6 @@ export const img = {
   kitB: p14,
   logo: p15,
   waxCapivara: p16,
+  velaAnjo: p17,
+  velaAnjoDetalhe: p18,
 };

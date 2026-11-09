@@ -26,29 +26,29 @@ function Home() {
       {/* Hero */}
       <section className="relative">
         <div className="mx-auto grid max-w-7xl md:grid-cols-2 md:items-center md:gap-12 md:px-8 md:py-16">
-          <div className="relative order-2 px-6 py-12 md:order-1 md:px-0">
-            <Constellation className="absolute -top-2 right-6 size-16 text-greige md:-left-4 md:-top-10 md:right-auto md:size-20" />
+          <div className="relative z-10 order-2 min-w-0 px-6 py-10 md:order-1 md:px-0 md:py-0">
+            <Constellation className="pointer-events-none absolute -top-2 right-6 size-16 text-greige md:-left-4 md:-top-10 md:right-auto md:size-20" />
             <p className="eyebrow fade-up">Body splash · Velas · Wax melts</p>
-            <h1 className="fade-up mt-5 text-[2.6rem] leading-[1.02] md:text-6xl lg:text-7xl">
+            <h1 className="fade-up mt-5 text-[2.35rem] leading-[1.04] sm:text-[2.6rem] md:text-6xl lg:text-7xl">
               Transforme momentos simples em <em className="text-cocoa">experiências especiais.</em>
             </h1>
-            <p className="fade-up mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+            <p className="fade-up mt-5 max-w-md pr-10 text-base leading-relaxed text-muted-foreground sm:pr-0">
               Fragrâncias e aromas criados para tornar seus momentos ainda mais especiais.
             </p>
-            <div className="fade-up mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link to="/produtos" className="btn btn-solid">
+            <div className="fade-up mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link to="/produtos" className="btn btn-solid w-full sm:w-auto">
                 Conheça nossos produtos <ArrowRight className="size-4" strokeWidth={1.4} />
               </Link>
-              <a href={waLink(generalMessage)} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+              <a href={waLink(generalMessage)} target="_blank" rel="noopener noreferrer" className="btn btn-outline w-full sm:w-auto">
                 Fale conosco
               </a>
             </div>
           </div>
-          <div className="order-1 grid grid-cols-5 gap-2 md:order-2 md:gap-3">
-            <img src={img.copoOpen} alt="Vela aromática em copo de vidro com tampa de madeira" className="col-span-3 aspect-[3/4] h-full w-full object-cover" />
-            <div className="col-span-2 grid gap-2 md:gap-3">
-              <img src={img.splashFamily} alt="Body splashes Três Marias de 100ml e 200ml" className="aspect-square h-full w-full object-cover" />
-              <img src={img.waxCoracao} alt="Wax melts em formato de coração" className="aspect-square h-full w-full object-cover" />
+          <div className="order-1 grid aspect-square w-full min-w-0 grid-cols-[3fr_2fr] grid-rows-1 gap-2 overflow-hidden md:order-2 md:aspect-[4/5] md:max-h-[620px] md:gap-3">
+            <img src={img.copoOpen} alt="Vela aromática em copo de vidro com tampa de madeira" className="h-full min-h-0 w-full object-cover" />
+            <div className="grid min-h-0 grid-rows-2 gap-2 md:gap-3">
+              <img src={img.splashFamily} alt="Body splashes Três Marias de 100ml e 200ml" className="h-full min-h-0 w-full object-cover" />
+              <img src={img.waxCoracao} alt="Wax melts em formato de coração" className="h-full min-h-0 w-full object-cover" />
             </div>
           </div>
         </div>

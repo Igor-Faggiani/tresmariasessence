@@ -2,8 +2,8 @@ import type { Category, CategoryId, Product } from "@/types/product";
 import { img } from "./images";
 import { natalProducts } from "./natalProducts";
 
-const BODY_SCENTS = ["Vanilla", "Morango", "Good Girl"];
-const CANDLE_SCENTS = ["Vanilla", "Cereja e Avelã", "Café Verde"];
+const BODY_SCENTS = ["Vanilla", "Morango", "Good Girl", "Melancia"];
+const CANDLE_SCENTS = ["Vanilla", "Cereja e Avelã", "Chá de capim e limão", "Flor de algodão", "Café Verde"];
 
 export const categories: Category[] = [
   { id: "body-splash", name: "Body Splash", description: "Leveza perfumada para o dia a dia.", image: img.splashFamily },
@@ -106,6 +106,19 @@ export const products: Product[] = [
     availableModels: [],
     featured: false,
     relevance: 7,
+  },
+  {
+    id: "p8",
+    slug: "vela-aromatica-anjo-personalizada",
+    name: "Vela Aromática Anjo — Personalizada",
+    category: "velas",
+    description: "Vela aromática em formato de anjo, apresentada em recipiente de vidro e personalizada. Escolha a essência desejada.",
+    price: 41.8,
+    images: [img.velaAnjo, img.velaAnjoDetalhe],
+    availableScents: CANDLE_SCENTS,
+    availableModels: [],
+    featured: false,
+    relevance: 8,
   },
 ];
 
