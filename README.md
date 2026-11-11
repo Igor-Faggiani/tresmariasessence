@@ -1,104 +1,112 @@
 # Três Marias Essências
 
-**Digital storefront for a handcrafted fragrance brand.**
+**Catálogo digital e vitrine virtual para uma marca de produtos aromáticos artesanais.**
 
-A modern, responsive e-commerce showcase developed for Três Marias Essências, a brand specializing in scented candles, body splashes, wax melts and personalized gift kits.
+🌐 **Site em produção:** [www.tresmariasessence.com.br](https://www.tresmariasessence.com.br)
 
-The project aims to provide customers with an elegant and intuitive shopping experience, allowing them to explore products, choose fragrances, manage a shopping cart and place orders directly through WhatsApp.
+## Sobre o projeto
 
-## About the Project
+O Três Marias Essências é uma aplicação web desenvolvida para uma marca especializada em velas aromáticas, body splashes, wax melts e kits personalizados.
 
-Três Marias Essências was created to establish a digital presence for a small business, transforming its product catalog into a modern online storefront.
+O objetivo do projeto foi criar uma presença digital para a marca, transformando seu catálogo de produtos em uma experiência de navegação moderna, intuitiva e responsiva, permitindo que os clientes conheçam os produtos, selecionem fragrâncias, adicionem itens à sacola e realizem seus pedidos diretamente pelo WhatsApp.
 
-The project was initially developed using AI-assisted tools, with Lovable as the primary development platform. I was responsible for defining the project requirements, directing the development process, reviewing and adapting the generated code, implementing improvements, troubleshooting issues and evolving the application.
+O projeto foi inicialmente desenvolvido com auxílio de ferramentas de inteligência artificial, utilizando o Lovable como principal plataforma de desenvolvimento.
 
-This project is also part of my practical experience with modern frontend development and AI-assisted software engineering.
+Minha participação envolveu a concepção da solução, definição de requisitos, direcionamento do desenvolvimento, revisão e adaptação do código gerado, implementação de melhorias, correção de problemas e evolução contínua da aplicação.
 
-## Features
+## Funcionalidades
 
-- Responsive design for desktop and mobile devices.
-- Product catalog with categories and detailed product information.
-- Product variations, including fragrances and models.
-- Shopping cart with quantity management.
-- Dynamic order summary.
-- WhatsApp integration for order placement.
-- Dedicated seasonal product collections.
-- Optimized image presentation and mobile navigation.
+- Interface responsiva, adaptada para dispositivos móveis e desktops.
+- Catálogo de produtos com categorias e informações detalhadas.
+- Seleção de fragrâncias e variações dos produtos.
+- Sacola de compras com gerenciamento de quantidades.
+- Resumo dinâmico dos pedidos.
+- Integração com WhatsApp para finalização de pedidos.
+- Página dedicada a coleções sazonais.
+- Navegação otimizada para dispositivos móveis.
 
-## Tech Stack
+## Tecnologias utilizadas
 
-- **React** — Component-based user interface.
-- **TypeScript** — Static typing and improved maintainability.
-- **Vite** — Development environment and build tooling.
-- **Tailwind CSS** — Styling and responsive layouts.
-- **Lucide** — Interface icons.
-- **WhatsApp Integration** — Order communication and checkout.
+- **React:** desenvolvimento da interface baseada em componentes.
+- **TypeScript:** tipagem estática e maior segurança no desenvolvimento.
+- **Vite:** ambiente de desenvolvimento e ferramenta de build.
+- **Tailwind CSS:** estilização e construção de layouts responsivos.
+- **Lucide:** biblioteca de ícones.
+- **WhatsApp:** integração para comunicação e recebimento de pedidos.
+- **Git e GitHub:** versionamento e gerenciamento do código-fonte.
+- **Vercel:** hospedagem e publicação da aplicação em produção.
 
-## Development & Contributions
+## Desenvolvimento e contribuições
 
-AI-assisted development was used throughout the initial implementation and subsequent improvements.
+A implementação inicial contou com o auxílio de inteligência artificial, principalmente por meio da plataforma Lovable.
 
-My contributions include:
+Durante o desenvolvimento, fui responsável por direcionar a construção da aplicação, avaliar os resultados gerados e realizar ajustes e melhorias de acordo com as necessidades do projeto.
 
-- Project conception and requirements definition.
-- UI/UX direction and visual refinements.
-- Component and application structure review.
-- Product catalog configuration and data organization.
-- Responsive layout improvements.
-- Debugging and troubleshooting.
-- Integration and refinement of shopping cart and WhatsApp workflows.
-- Deployment preparation and version control using Git and GitHub.
+Entre as atividades desenvolvidas:
 
-The codebase is maintained in my GitHub account, with changes tracked through Git commits.
+- Levantamento e definição dos requisitos funcionais.
+- Planejamento da estrutura e organização da aplicação.
+- Revisão e adaptação de componentes React e TypeScript.
+- Organização e atualização do catálogo de produtos.
+- Ajustes de layout e responsividade para dispositivos móveis.
+- Identificação e correção de problemas de interface.
+- Integração e refinamento do fluxo de sacola de compras e WhatsApp.
+- Preparação do ambiente de produção.
+- Configuração de domínio e publicação na Vercel.
+- Controle de versões e registro das alterações utilizando Git e GitHub.
 
-## Running Locally
+## Execução local
 
-### Prerequisites
+### Pré-requisitos
 
 - Node.js
 - npm
 - Git
 
-### Installation
+### Instalação
 
 ```bash
-# Clone the repository
-git clone <repository-url>
+# Clonar o repositório
+git clone <URL_DO_REPOSITORIO>
 
-# Navigate to the project directory
+# Entrar na pasta do projeto
 cd tresmariasessence
 
-# Install dependencies
+# Instalar as dependências
 npm install
 
-# Start the development server
+# Executar em ambiente de desenvolvimento
 npm run dev
 ```
 
-### Production Build
+### Build de produção
 
 ```bash
 npm run build
 ```
 
-The production-ready files will be generated in the `dist` directory.
+Os arquivos otimizados para publicação serão gerados na pasta `dist`.
 
-## AI-Assisted Development
+## Inteligência artificial no desenvolvimento
 
-This project was initially built with [Lovable](https://lovable.dev), an AI-powered development platform.
+O projeto foi inicialmente construído com o auxílio do [Lovable](https://lovable.dev), uma plataforma de desenvolvimento assistido por inteligência artificial.
 
-AI tools were used to accelerate implementation, generate initial components and assist with development tasks. The resulting code was reviewed, adapted and refined throughout the project lifecycle.
+A IA foi utilizada para acelerar a implementação inicial, gerar componentes e auxiliar em diferentes etapas do desenvolvimento.
 
-**The goal is not to claim manual authorship of every line of code, but to demonstrate practical experience in planning, directing, evaluating, debugging and maintaining an AI-assisted software project.**
+O código gerado passou por processos de revisão, adaptação, correção e aprimoramento ao longo da evolução da aplicação.
 
-## Author
+A proposta deste projeto não é atribuir autoria manual de cada linha de código, mas demonstrar experiência prática na concepção, direcionamento, avaliação, depuração e evolução de uma aplicação real utilizando ferramentas modernas de desenvolvimento assistido por IA.
+
+## Autor
 
 **Igor de Pin Faggiani**
 
-Software Support Analyst | Software Engineering Student | Aspiring Frontend Developer
+Estudante de Engenharia de Software | Analista de Suporte de Software
 
 [LinkedIn](https://linkedin.com/in/igor-faggiani-2a987b2a3)
 
 ---
 
-*Developed as a real-world project for Três Marias Essências.*
+**Projeto desenvolvido para Três Marias Essências.**
+
+*Aplicação publicada em produção utilizando Vercel.*
