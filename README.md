@@ -1,24 +1,104 @@
-# Tresmariasessence
+# Três Marias Essências
 
-Implement exactly the screenshot and nothing else
+**Digital storefront for a handcrafted fragrance brand.**
 
-This project was built with [Lovable](https://lovable.dev).
+A modern, responsive e-commerce showcase developed for Três Marias Essências, a brand specializing in scented candles, body splashes, wax melts and personalized gift kits.
 
-## Build with Lovable
+The project aims to provide customers with an elegant and intuitive shopping experience, allowing them to explore products, choose fragrances, manage a shopping cart and place orders directly through WhatsApp.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/07ad7e16-2e4f-4f79-a0f1-f2995ebbdaaa).
+## About the Project
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Três Marias Essências was created to establish a digital presence for a small business, transforming its product catalog into a modern online storefront.
 
-## Development
+The project was initially developed using AI-assisted tools, with Lovable as the primary development platform. I was responsible for defining the project requirements, directing the development process, reviewing and adapting the generated code, implementing improvements, troubleshooting issues and evolving the application.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+This project is also part of my practical experience with modern frontend development and AI-assisted software engineering.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+## Features
+
+- Responsive design for desktop and mobile devices.
+- Product catalog with categories and detailed product information.
+- Product variations, including fragrances and models.
+- Shopping cart with quantity management.
+- Dynamic order summary.
+- WhatsApp integration for order placement.
+- Dedicated seasonal product collections.
+- Optimized image presentation and mobile navigation.
+
+## Tech Stack
+
+- **React** — Component-based user interface.
+- **TypeScript** — Static typing and improved maintainability.
+- **Vite** — Development environment and build tooling.
+- **Tailwind CSS** — Styling and responsive layouts.
+- **Lucide** — Interface icons.
+- **WhatsApp Integration** — Order communication and checkout.
+
+## Development & Contributions
+
+AI-assisted development was used throughout the initial implementation and subsequent improvements.
+
+My contributions include:
+
+- Project conception and requirements definition.
+- UI/UX direction and visual refinements.
+- Component and application structure review.
+- Product catalog configuration and data organization.
+- Responsive layout improvements.
+- Debugging and troubleshooting.
+- Integration and refinement of shopping cart and WhatsApp workflows.
+- Deployment preparation and version control using Git and GitHub.
+
+The codebase is maintained in my GitHub account, with changes tracked through Git commits.
+
+## Running Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd tresmariasessence
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+The production-ready files will be generated in the `dist` directory.
+
+## AI-Assisted Development
+
+This project was initially built with [Lovable](https://lovable.dev), an AI-powered development platform.
+
+AI tools were used to accelerate implementation, generate initial components and assist with development tasks. The resulting code was reviewed, adapted and refined throughout the project lifecycle.
+
+**The goal is not to claim manual authorship of every line of code, but to demonstrate practical experience in planning, directing, evaluating, debugging and maintaining an AI-assisted software project.**
+
+## Author
+
+**Igor de Pin Faggiani**
+
+Software Support Analyst | Software Engineering Student | Aspiring Frontend Developer
+
+[LinkedIn](https://linkedin.com/in/igor-faggiani-2a987b2a3)
+
+---
+
+*Developed as a real-world project for Três Marias Essências.*
