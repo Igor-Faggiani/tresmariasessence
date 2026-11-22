@@ -58,7 +58,7 @@ function ChristmasCollection() {
           <p className="eyebrow">Três Marias Essências</p>
           <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl">Presentes para encantar</h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Explore os produtos da nossa coleção natalina. As fragrâncias disponíveis são Panetonne, Gingerbread, Cookie de chocolate e Maçã e canela.
+            Explore os produtos da nossa coleção natalina. As fragrâncias disponíveis são Gingerbread, Maçã e canela, Panetonne e Cookie de Natal.
           </p>
         </header>
 

@@ -8,11 +8,16 @@ import waxFloco from "@/assets/natal/wax-melts-floco-neve.jpg";
 import arvoreNatal from "@/assets/natal/vela-arvore-natal.jpg";
 import rena from "@/assets/natal/vela-rena.jpg";
 import presepioPersonalizado from "@/assets/natal/vela-presepio-personalizada.jpg";
+import arvoreChantilly from "@/assets/natal/atualizados/arvore-chantilly.webp";
+import arvoreChantillyVariante from "@/assets/natal/atualizados/arvore-chantilly-variante.webp";
+import panetonneCopo from "@/assets/natal/atualizados/panetonne-copo.webp";
+import parafinaGelFolhaOuro from "@/assets/natal/atualizados/parafina-gel-folha-ouro.webp";
+import vilaNatalGesso from "@/assets/natal/atualizados/vila-natal-gesso.webp";
 
 export const CHRISTMAS_SCENTS = [
   "Panetonne",
   "Gingerbread",
-  "Cookie de chocolate",
+  "Cookie de Natal",
   "Maçã e canela",
 ];
 
@@ -110,6 +115,71 @@ export const natalProducts: Product[] = [
     relevance: 7,
   },
   {
+    id: "natal-10",
+    slug: "vela-aromatica-arvore-natal-chantilly",
+    name: "Vela Aromática — Árvore de Natal no Copo de Whisky com Chantilly",
+    category: "velas",
+    description: "Vela aromática no copo de whisky, decorada com chantilly e tema de árvore de Natal.",
+    price: 78.99,
+    images: [arvoreChantilly],
+    availableScents: CHRISTMAS_SCENTS,
+    availableModels: [],
+    featured: true,
+    relevance: 8,
+  },
+  {
+    id: "natal-11",
+    slug: "vela-aromatica-arvore-natal-chantilly-variacao",
+    name: "Vela Aromática — Árvore de Natal no Copo com Chantilly",
+    category: "velas",
+    description: "Vela aromática no copo, decorada com chantilly e tema de árvore de Natal.",
+    price: 78.99,
+    images: [arvoreChantillyVariante],
+    availableScents: CHRISTMAS_SCENTS,
+    availableModels: [],
+    featured: true,
+    relevance: 9,
+  },
+  {
+    id: "natal-12",
+    slug: "vela-aromatica-panetonne-copo-whisky",
+    name: "Vela Aromática — Panetonne no Copo de Whisky",
+    category: "velas",
+    description: "Vela aromática no copo de whisky com fragrância de Panetonne.",
+    price: 79.8,
+    images: [panetonneCopo],
+    availableScents: ["Panetonne"],
+    availableModels: [],
+    featured: true,
+    relevance: 10,
+  },
+  {
+    id: "natal-13",
+    slug: "vela-aromatica-parafina-gel-folha-ouro",
+    name: "Vela Aromática — Parafina em Gel com Folha de Ouro",
+    category: "velas",
+    description: "Vela aromática de parafina em gel no copo de whisky, com detalhe de folha de ouro.",
+    price: 78.99,
+    images: [parafinaGelFolhaOuro],
+    availableScents: CHRISTMAS_SCENTS,
+    availableModels: [],
+    featured: true,
+    relevance: 11,
+  },
+  {
+    id: "natal-14",
+    slug: "vela-aromatica-vila-natal-vaso-gesso",
+    name: "Vela Aromática — Vila de Natal no Vaso de Gesso",
+    category: "velas",
+    description: "Vela aromática em vaso de gesso com cenário de Vila de Natal, urso polar e chantilly.",
+    price: 99.9,
+    images: [vilaNatalGesso],
+    availableScents: CHRISTMAS_SCENTS,
+    availableModels: [],
+    featured: true,
+    relevance: 12,
+  },
+  {
     id: "natal-08",
     slug: "vela-aromatica-rena",
     name: "Vela Aromática — Rena",
@@ -120,7 +190,7 @@ export const natalProducts: Product[] = [
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
     featured: true,
-    relevance: 8,
+    relevance: 13,
   },
   {
     id: "natal-09",
@@ -133,6 +203,6 @@ export const natalProducts: Product[] = [
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
     featured: true,
-    relevance: 9,
+    relevance: 14,
   },
 ];

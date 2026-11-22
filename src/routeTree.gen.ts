@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ColecaoFeRouteImport } from './routes/colecao-fe'
 import { Route as EspecialNatalRouteImport } from './routes/especial-natal'
 import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as SobreRouteImport } from './routes/sobre'
@@ -18,6 +19,11 @@ import { Route as ProdutoSlugRouteImport } from './routes/produto.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColecaoFeRoute = ColecaoFeRouteImport.update({
+  id: '/colecao-fe',
+  path: '/colecao-fe',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EspecialNatalRoute = EspecialNatalRouteImport.update({
@@ -43,6 +49,7 @@ const ProdutoSlugRoute = ProdutoSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/colecao-fe': typeof ColecaoFeRoute
   '/especial-natal': typeof EspecialNatalRoute
   '/produtos': typeof ProdutosRoute
   '/sobre': typeof SobreRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/colecao-fe': typeof ColecaoFeRoute
   '/especial-natal': typeof EspecialNatalRoute
   '/produtos': typeof ProdutosRoute
   '/sobre': typeof SobreRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/colecao-fe': typeof ColecaoFeRoute
   '/especial-natal': typeof EspecialNatalRoute
   '/produtos': typeof ProdutosRoute
   '/sobre': typeof SobreRoute
@@ -65,12 +74,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/especial-natal' | '/produtos' | '/sobre' | '/produto/$slug'
+  fullPaths:
+    | '/'
+    | '/colecao-fe'
+    | '/especial-natal'
+    | '/produtos'
+    | '/sobre'
+    | '/produto/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/especial-natal' | '/produtos' | '/sobre' | '/produto/$slug'
+  to:
+    | '/'
+    | '/colecao-fe'
+    | '/especial-natal'
+    | '/produtos'
+    | '/sobre'
+    | '/produto/$slug'
   id:
     | '__root__'
     | '/'
+    | '/colecao-fe'
     | '/especial-natal'
     | '/produtos'
     | '/sobre'
@@ -79,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ColecaoFeRoute: typeof ColecaoFeRoute
   EspecialNatalRoute: typeof EspecialNatalRoute
   ProdutosRoute: typeof ProdutosRoute
   SobreRoute: typeof SobreRoute
@@ -92,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/colecao-fe': {
+      id: '/colecao-fe'
+      path: '/colecao-fe'
+      fullPath: '/colecao-fe'
+      preLoaderRoute: typeof ColecaoFeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/especial-natal': {
@@ -127,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ColecaoFeRoute: ColecaoFeRoute,
   EspecialNatalRoute: EspecialNatalRoute,
   ProdutosRoute: ProdutosRoute,
   SobreRoute: SobreRoute,
