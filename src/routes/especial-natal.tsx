@@ -9,7 +9,8 @@ export const Route = createFileRoute("/especial-natal")({
       { title: "Especial de Natal | Três Marias Essências" },
       {
         name: "description",
-        content: "Conheça a coleção especial de Natal da Três Marias Essências: velas aromáticas, kits para presentear e wax melts.",
+        content:
+          "Conheça a coleção especial de Natal da Três Marias Essências: velas aromáticas, kits para presentear e wax melts.",
       },
       { property: "og:title", content: "Especial de Natal | Três Marias Essências" },
       {
@@ -34,9 +35,13 @@ function ChristmasCollection() {
               Um Natal cheio de carinho e aroma.
             </h1>
             <p className="mt-6 max-w-lg text-sm leading-7 text-[#74665b] md:text-base">
-              Presentes feitos para transformar pequenos momentos em lembranças especiais. Escolha seus favoritos e monte seu pedido com a gente.
+              Presentes feitos para transformar pequenos momentos em lembranças especiais. Escolha
+              seus favoritos e monte seu pedido com a gente.
             </p>
-            <a href="#colecao-natal" className="btn btn-solid mt-8 inline-flex border-[#40352e] bg-[#40352e] text-white hover:bg-[#5b493d]">
+            <a
+              href="#colecao-natal"
+              className="btn btn-solid mt-8 inline-flex border-[#40352e] bg-[#40352e] text-white hover:bg-[#5b493d]"
+            >
               <Gift className="size-4" strokeWidth={1.5} /> Conheça a coleção
             </a>
           </div>
@@ -53,12 +58,18 @@ function ChristmasCollection() {
         <div className="pointer-events-none absolute -right-16 -top-20 size-64 rounded-full border border-[#c8b7a5]/50 md:size-96" />
       </section>
 
-      <section id="colecao-natal" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 md:px-8 md:py-20">
+      <section
+        id="colecao-natal"
+        className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 md:px-8 md:py-20"
+      >
         <header className="mx-auto mb-12 max-w-2xl text-center">
           <p className="eyebrow">Três Marias Essências</p>
-          <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl">Presentes para encantar</h2>
+          <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl">
+            Presentes para encantar
+          </h2>
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Explore os produtos da nossa coleção natalina. As fragrâncias disponíveis são Gingerbread, Maçã e canela, Panetonne e Cookie de Natal.
+            Explore os produtos da nossa coleção natalina. As fragrâncias disponíveis são
+            Gingerbread, Maçã e canela, Panetonne e Cookie de Natal.
           </p>
         </header>
 
@@ -73,9 +84,12 @@ function ChristmasCollection() {
         <p className="eyebrow">Feito para presentear</p>
         <h2 className="mt-3 font-serif text-3xl md:text-4xl">Seu presente de Natal começa aqui.</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
-          Escolha seus produtos favoritos e finalize sua encomenda pelo WhatsApp. Consulte por lá as opções de entrega e pagamento.
+          Escolha seus produtos favoritos e finalize sua encomenda pelo WhatsApp. Consulte por lá as
+          opções de entrega e pagamento.
         </p>
-        <Link to="/produtos" className="btn btn-outline mt-7 inline-flex">Ver catálogo completo</Link>
+        <Link to="/produtos" className="btn btn-outline mt-7 inline-flex">
+          Ver catálogo completo
+        </Link>
       </section>
     </main>
   );

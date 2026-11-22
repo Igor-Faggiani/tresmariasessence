@@ -4,13 +4,41 @@ import { natalProducts } from "./natalProducts";
 import { faithProducts } from "./faithProducts";
 
 const BODY_SCENTS = ["Good Girl", "Vanilla", "Morango", "Melancia", "Maracujá"];
-const CANDLE_SCENTS = ["Vanilla", "Amora branca", "Chá-branco", "Capim & limão", "Flor de algodão", "Cereja e avelã", "Café verde"];
+const CANDLE_SCENTS = [
+  "Vanilla",
+  "Amora branca",
+  "Chá-branco",
+  "Capim & limão",
+  "Flor de algodão",
+  "Cereja e avelã",
+  "Café verde",
+];
 
 export const categories: Category[] = [
-  { id: "body-splash", name: "Body Splash", description: "Leveza perfumada para o dia a dia.", image: img.splashFamily },
-  { id: "velas", name: "Velas Aromáticas", description: "Luz suave e aroma que acolhe.", image: img.copoOpen },
-  { id: "wax-melts", name: "Wax Melts", description: "Perfume para o ambiente, sem chama.", image: img.waxCoracao },
-  { id: "kits", name: "Kits Personalizados", description: "Presentes montados com carinho.", image: img.kitA },
+  {
+    id: "body-splash",
+    name: "Body Splash",
+    description: "Leveza perfumada para o dia a dia.",
+    image: img.splashFamily,
+  },
+  {
+    id: "velas",
+    name: "Velas Aromáticas",
+    description: "Luz suave e aroma que acolhe.",
+    image: img.copoOpen,
+  },
+  {
+    id: "wax-melts",
+    name: "Wax Melts",
+    description: "Perfume para o ambiente, sem chama.",
+    image: img.waxCoracao,
+  },
+  {
+    id: "kits",
+    name: "Kits Personalizados",
+    description: "Presentes montados com carinho.",
+    image: img.kitA,
+  },
 ];
 
 export const products: Product[] = [
@@ -100,7 +128,8 @@ export const products: Product[] = [
     slug: "kit-personalizado",
     name: "Kit Personalizado",
     category: "kits",
-    description: "Kits personalizados para presentear. Escolha os produtos e fragrâncias e monte a composição pelo WhatsApp.",
+    description:
+      "Kits personalizados para presentear. Escolha os produtos e fragrâncias e monte a composição pelo WhatsApp.",
     price: null,
     images: [img.kitA, img.kitB],
     availableScents: [],
@@ -113,7 +142,8 @@ export const products: Product[] = [
     slug: "vela-aromatica-anjo-personalizada",
     name: "Vela Aromática - Anjo Personalizada",
     category: "velas",
-    description: "Vela aromática em formato de anjo, apresentada em recipiente de vidro e personalizada. Escolha a essência desejada.",
+    description:
+      "Vela aromática em formato de anjo, apresentada em recipiente de vidro e personalizada. Escolha a essência desejada.",
     price: 41.8,
     images: [img.velaAnjo, img.velaAnjoDetalhe],
     availableScents: CANDLE_SCENTS,
@@ -123,6 +153,7 @@ export const products: Product[] = [
   },
 ];
 
-export const getProductBySlug = (slug: string) => [...products, ...natalProducts, ...faithProducts].find((p) => p.slug === slug);
+export const getProductBySlug = (slug: string) =>
+  [...products, ...natalProducts, ...faithProducts].find((p) => p.slug === slug);
 export const getCategory = (id: CategoryId) => categories.find((c) => c.id === id)!;
 export const categoryIds = categories.map((c) => c.id);

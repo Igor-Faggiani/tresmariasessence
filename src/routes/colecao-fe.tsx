@@ -9,7 +9,8 @@ export const Route = createFileRoute("/colecao-fe")({
       { title: "Coleção Fé | Três Marias Essências" },
       {
         name: "description",
-        content: "Conheça a Coleção Fé da Três Marias Essências: velas e peças aromáticas delicadas para presentear.",
+        content:
+          "Conheça a Coleção Fé da Três Marias Essências: velas e peças aromáticas delicadas para presentear.",
       },
       { property: "og:title", content: "Coleção Fé | Três Marias Essências" },
       {
@@ -34,9 +35,13 @@ function FaithCollection() {
               Fé em cada detalhe.
             </h1>
             <p className="mt-6 max-w-lg text-sm leading-7 text-[#74665b] md:text-base">
-              Peças delicadas feitas para presentear, acolher e marcar momentos especiais. Conheça a coleção e escolha sua fragrância favorita.
+              Peças delicadas feitas para presentear, acolher e marcar momentos especiais. Conheça a
+              coleção e escolha sua fragrância favorita.
             </p>
-            <a href="#colecao-fe" className="btn btn-solid mt-8 inline-flex border-[#40352e] bg-[#40352e] text-white hover:bg-[#5b493d]">
+            <a
+              href="#colecao-fe"
+              className="btn btn-solid mt-8 inline-flex border-[#40352e] bg-[#40352e] text-white hover:bg-[#5b493d]"
+            >
               <Heart className="size-4" strokeWidth={1.5} /> Conheça a coleção
             </a>
           </div>
@@ -53,7 +58,10 @@ function FaithCollection() {
         <div className="pointer-events-none absolute -right-16 -top-20 size-64 rounded-full border border-[#c8b7a5]/50 md:size-96" />
       </section>
 
-      <section id="colecao-fe" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 md:px-8 md:py-20">
+      <section
+        id="colecao-fe"
+        className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 md:px-8 md:py-20"
+      >
         <header className="mx-auto mb-12 max-w-2xl text-center">
           <p className="eyebrow">Três Marias Essências</p>
           <h2 className="mt-3 font-serif text-4xl text-foreground md:text-5xl">Coleção Fé</h2>
@@ -73,9 +81,12 @@ function FaithCollection() {
         <p className="eyebrow">Feito para presentear</p>
         <h2 className="mt-3 font-serif text-3xl md:text-4xl">Um carinho em forma de presente.</h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-muted-foreground">
-          Escolha suas peças favoritas e finalize sua encomenda pelo WhatsApp. Consulte por lá as opções de entrega e pagamento.
+          Escolha suas peças favoritas e finalize sua encomenda pelo WhatsApp. Consulte por lá as
+          opções de entrega e pagamento.
         </p>
-        <Link to="/produtos" className="btn btn-outline mt-7 inline-flex">Ver catálogo completo</Link>
+        <Link to="/produtos" className="btn btn-outline mt-7 inline-flex">
+          Ver catálogo completo
+        </Link>
       </section>
     </main>
   );

@@ -38,11 +38,17 @@ export function ProductCard({ product }: { product: Product }) {
         </h3>
         <p className="mt-1 text-sm">{priceLabel(product)}</p>
         <div className="mt-auto flex flex-col gap-2 pt-4 sm:flex-row">
-          <Link to="/produto/$slug" params={{ slug: product.slug }} className="btn btn-outline min-h-10 flex-1 px-3 text-[0.65rem]">
+          <Link
+            to="/produto/$slug"
+            params={{ slug: product.slug }}
+            className="btn btn-outline min-h-10 flex-1 px-3 text-[0.65rem]"
+          >
             Detalhes
           </Link>
           <a
-            href={waLink(`Olá! Tenho interesse no produto ${product.name} da Três Marias Essências.`)}
+            href={waLink(
+              `Olá! Tenho interesse no produto ${product.name} da Três Marias Essências.`,
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-solid min-h-10 flex-1 px-3 text-[0.65rem]"

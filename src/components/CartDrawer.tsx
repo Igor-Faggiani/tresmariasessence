@@ -28,7 +28,11 @@ export function CartDrawer() {
       >
         <div className="flex h-16 items-center justify-between border-b border-border px-5">
           <h2 className="text-2xl">Sua sacola</h2>
-          <button className="grid size-11 place-items-center" aria-label="Fechar sacola" onClick={() => setOpen(false)}>
+          <button
+            className="grid size-11 place-items-center"
+            aria-label="Fechar sacola"
+            onClick={() => setOpen(false)}
+          >
             <X className="size-5" strokeWidth={1.4} />
           </button>
         </div>
@@ -37,7 +41,9 @@ export function CartDrawer() {
           <div className="flex flex-1 flex-col items-center justify-center gap-4 px-8 text-center">
             <ShoppingBag className="size-10 text-greige" strokeWidth={1} />
             <p className="font-serif text-2xl">Sua sacola está vazia</p>
-            <p className="text-sm text-muted-foreground">Escolha suas fragrâncias favoritas no catálogo.</p>
+            <p className="text-sm text-muted-foreground">
+              Escolha suas fragrâncias favoritas no catálogo.
+            </p>
             <Link to="/produtos" onClick={() => setOpen(false)} className="btn btn-outline mt-2">
               Ver produtos
             </Link>
@@ -47,7 +53,11 @@ export function CartDrawer() {
             <ul className="flex-1 divide-y divide-border overflow-y-auto px-5">
               {items.map((i) => (
                 <li key={i.key} className="flex gap-4 py-5">
-                  <img src={i.image} alt={i.name} className="h-24 w-20 shrink-0 bg-secondary object-cover" />
+                  <img
+                    src={i.image}
+                    alt={i.name}
+                    className="h-24 w-20 shrink-0 bg-secondary object-cover"
+                  />
                   <div className="flex min-w-0 flex-1 flex-col">
                     <p className="font-serif text-lg leading-tight">{i.name}</p>
                     <p className="mt-1 text-xs text-muted-foreground">
@@ -56,15 +66,29 @@ export function CartDrawer() {
                     <p className="mt-1 text-sm">{formatBRL(i.price)}</p>
                     <div className="mt-auto flex items-center justify-between pt-2">
                       <div className="flex items-center border border-border">
-                        <button className="grid size-9 place-items-center" aria-label="Diminuir" onClick={() => setQty(i.key, i.quantity - 1)}>
+                        <button
+                          className="grid size-9 place-items-center"
+                          aria-label="Diminuir"
+                          onClick={() => setQty(i.key, i.quantity - 1)}
+                        >
                           <Minus className="size-3.5" />
                         </button>
-                        <span className="w-8 text-center text-sm" aria-live="polite">{i.quantity}</span>
-                        <button className="grid size-9 place-items-center" aria-label="Aumentar" onClick={() => setQty(i.key, i.quantity + 1)}>
+                        <span className="w-8 text-center text-sm" aria-live="polite">
+                          {i.quantity}
+                        </span>
+                        <button
+                          className="grid size-9 place-items-center"
+                          aria-label="Aumentar"
+                          onClick={() => setQty(i.key, i.quantity + 1)}
+                        >
                           <Plus className="size-3.5" />
                         </button>
                       </div>
-                      <button className="grid size-9 place-items-center text-muted-foreground hover:text-destructive" aria-label={`Remover ${i.name}`} onClick={() => remove(i.key)}>
+                      <button
+                        className="grid size-9 place-items-center text-muted-foreground hover:text-destructive"
+                        aria-label={`Remover ${i.name}`}
+                        onClick={() => remove(i.key)}
+                      >
                         <Trash2 className="size-4" strokeWidth={1.4} />
                       </button>
                     </div>
@@ -77,7 +101,9 @@ export function CartDrawer() {
                 <span className="eyebrow">Subtotal</span>
                 <span className="font-serif text-2xl">{formatBRL(total)}</span>
               </div>
-              <p className="mt-2 text-xs text-muted-foreground">Entrega e pagamento combinados pelo WhatsApp.</p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Entrega e pagamento combinados pelo WhatsApp.
+              </p>
               <a
                 href={waLink(buildOrderMessage(items))}
                 target="_blank"
@@ -86,7 +112,10 @@ export function CartDrawer() {
               >
                 <WhatsAppIcon className="size-4" /> Finalizar pelo WhatsApp
               </a>
-              <button onClick={() => setOpen(false)} className="mt-3 w-full py-2 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground">
+              <button
+                onClick={() => setOpen(false)}
+                className="mt-3 w-full py-2 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground"
+              >
                 Continuar comprando
               </button>
             </div>
@@ -101,10 +130,16 @@ export function CartNotice() {
   const { notice, setOpen } = useCart();
   if (!notice) return null;
   return (
-    <div role="status" className="fade-up fixed inset-x-4 bottom-24 z-40 mx-auto flex max-w-sm items-center gap-3 bg-primary px-4 py-3 text-sm text-primary-foreground shadow-soft">
+    <div
+      role="status"
+      className="fade-up fixed inset-x-4 bottom-24 z-40 mx-auto flex max-w-sm items-center gap-3 bg-primary px-4 py-3 text-sm text-primary-foreground shadow-soft"
+    >
       <Check className="size-4 shrink-0" />
       <span className="flex-1">{notice}</span>
-      <button className="text-xs uppercase tracking-widest underline underline-offset-4" onClick={() => setOpen(true)}>
+      <button
+        className="text-xs uppercase tracking-widest underline underline-offset-4"
+        onClick={() => setOpen(true)}
+      >
         Ver
       </button>
     </div>

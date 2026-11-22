@@ -109,4 +109,4 @@ Estudante de Engenharia de Software | Analista de Suporte de Software
 
 **Projeto desenvolvido para Três Marias Essências.**
 
-*Aplicação publicada em produção utilizando Vercel.*
+_Aplicação publicada em produção utilizando Vercel._

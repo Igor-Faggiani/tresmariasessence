@@ -4,8 +4,24 @@ import { products } from "@/data/products";
 import type { CartItem } from "@/types/product";
 
 const items: CartItem[] = [
-  { key: "a", productId: "p1", name: "Body Splash 200ml", price: 57.95, image: "", scent: "Vanilla", quantity: 1 },
-  { key: "b", productId: "p3", name: "Vela Aromática — Copo de Whisky", price: 59.9, image: "", scent: "Cereja e Avelã", quantity: 1 },
+  {
+    key: "a",
+    productId: "p1",
+    name: "Body Splash 200ml",
+    price: 57.95,
+    image: "",
+    scent: "Vanilla",
+    quantity: 1,
+  },
+  {
+    key: "b",
+    productId: "p3",
+    name: "Vela Aromática — Copo de Whisky",
+    price: 59.9,
+    image: "",
+    scent: "Cereja e Avelã",
+    quantity: 1,
+  },
 ];
 
 describe("pedido pelo WhatsApp", () => {

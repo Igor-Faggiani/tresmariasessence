@@ -28,17 +28,28 @@ export function Footer() {
           <h2 className="eyebrow mb-5">Atendimento</h2>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href={waLink(generalMessage)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-cocoa">
+              <a
+                href={waLink(generalMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-cocoa"
+              >
                 <WhatsAppIcon className="size-4" /> {WHATSAPP_DISPLAY}
               </a>
             </li>
             <li>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-cocoa">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-cocoa"
+              >
                 <Instagram className="size-4" strokeWidth={1.4} /> @tresmarias.essencias
               </a>
             </li>
             <li className="leading-relaxed text-muted-foreground">
-              Entregas locais e envios para outras cidades. Valores e condições combinados pelo WhatsApp.
+              Entregas locais e envios para outras cidades. Valores e condições combinados pelo
+              WhatsApp.
             </li>
           </ul>
         </div>
@@ -51,7 +62,9 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm text-muted-foreground">Pagamento combinado diretamente pelo WhatsApp.</p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Pagamento combinado diretamente pelo WhatsApp.
+          </p>
         </div>
       </div>
       <div className="border-t border-border px-6 py-6 text-center text-xs tracking-wide text-muted-foreground">

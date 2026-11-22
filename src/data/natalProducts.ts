@@ -16,12 +16,7 @@ import vilaNatalGesso from "@/assets/natal/atualizados/vila-natal-gesso.webp";
 import caixaPapaiNoel from "@/assets/natal/atualizados/caixa_papai_noel.jpg";
 import vilaNatalGesso2 from "@/assets/natal/atualizados/vila_natal_gesso_2.jpg";
 
-export const CHRISTMAS_SCENTS = [
-  "Panetonne",
-  "Gingerbread",
-  "Cookie de Natal",
-  "Maçã e canela",
-];
+export const CHRISTMAS_SCENTS = ["Panetonne", "Gingerbread", "Cookie de Natal", "Maçã e canela"];
 
 export const natalProducts: Product[] = [
   {
@@ -29,7 +24,8 @@ export const natalProducts: Product[] = [
     slug: "kit-3-velas-natal",
     name: "Caixa — Kit com 3 Velas Aromáticas",
     category: "kits",
-    description: "Caixa especial com três velas aromáticas. Escolha a composição de modelos e a fragrância para deixar o presente ainda mais especial.",
+    description:
+      "Caixa especial com três velas aromáticas. Escolha a composição de modelos e a fragrância para deixar o presente ainda mais especial.",
     price: 57.5,
     images: [kit3],
     availableScents: CHRISTMAS_SCENTS,
@@ -42,7 +38,8 @@ export const natalProducts: Product[] = [
     slug: "kit-2-velas-natal",
     name: "Caixa — Kit com 2 Velas Aromáticas",
     category: "kits",
-    description: "Caixa para presente com duas velas aromáticas nos modelos Papai Noel e boneco de neve.",
+    description:
+      "Caixa para presente com duas velas aromáticas nos modelos Papai Noel e boneco de neve.",
     price: 45.5,
     images: [kit2],
     availableScents: CHRISTMAS_SCENTS,
@@ -68,7 +65,8 @@ export const natalProducts: Product[] = [
     slug: "vela-aromatica-bola-de-natal",
     name: "Vela Aromática — Bola de Natal",
     category: "velas",
-    description: "Vela aromática em formato de bola de Natal, acompanhada de embalagem para presente.",
+    description:
+      "Vela aromática em formato de bola de Natal, acompanhada de embalagem para presente.",
     price: 19.8,
     images: [bolaNatal],
     availableScents: CHRISTMAS_SCENTS,
@@ -94,7 +92,8 @@ export const natalProducts: Product[] = [
     slug: "wax-melts-floco-de-neve-30g",
     name: "Wax Melts 30g — Floco de Neve",
     category: "wax-melts",
-    description: "Cera aromática em formato de floco de neve para perfumar o ambiente no clima do Natal.",
+    description:
+      "Cera aromática em formato de floco de neve para perfumar o ambiente no clima do Natal.",
     price: 20.9,
     images: [waxFloco],
     availableScents: CHRISTMAS_SCENTS,
@@ -121,7 +120,8 @@ export const natalProducts: Product[] = [
     slug: "vela-aromatica-arvore-natal-chantilly",
     name: "Vela Aromática — Árvore de Natal no Copo de Whisky com Chantilly",
     category: "velas",
-    description: "Vela aromática no copo de whisky, decorada com chantilly e tema de árvore de Natal.",
+    description:
+      "Vela aromática no copo de whisky, decorada com chantilly e tema de árvore de Natal.",
     price: 78.99,
     images: [arvoreChantilly],
     availableScents: CHRISTMAS_SCENTS,
@@ -160,8 +160,9 @@ export const natalProducts: Product[] = [
     slug: "vela-aromatica-parafina-gel-folha-ouro",
     name: "Vela Aromática — Parafina em Gel com Folha de Ouro",
     category: "velas",
-    description: "Vela aromática de parafina em gel no copo de whisky, com detalhe de folha de ouro.",
-    price: 79.80,
+    description:
+      "Vela aromática de parafina em gel no copo de whisky, com detalhe de folha de ouro.",
+    price: 79.8,
     images: [parafinaGelFolhaOuro],
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
@@ -173,7 +174,8 @@ export const natalProducts: Product[] = [
     slug: "vela-aromatica-vila-natal-vaso-gesso",
     name: "Vela Aromática — Vila de Natal no Vaso de Gesso",
     category: "velas",
-    description: "Vela aromática em vaso de gesso com cenário de Vila de Natal, urso polar e chantilly.",
+    description:
+      "Vela aromática em vaso de gesso com cenário de Vila de Natal, urso polar e chantilly.",
     price: 99.9,
     images: [vilaNatalGesso, vilaNatalGesso2],
     availableScents: CHRISTMAS_SCENTS,

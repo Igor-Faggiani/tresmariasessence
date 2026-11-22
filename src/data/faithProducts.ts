@@ -47,8 +47,22 @@ const faithProduct = (
 });
 
 export const faithProducts: Product[] = [
-  faithProduct("fe-01", "nossa-senhora-aparecida-chantilly", "Nossa Senhora Aparecida com Chantilly", 74.9, nsChantilly, 1),
-  faithProduct("fe-02", "nossa-senhora-aparecida-parafina-gel", "Nossa Senhora Aparecida — Parafina em Gel", 84.9, nsGel, 2),
+  faithProduct(
+    "fe-01",
+    "nossa-senhora-aparecida-chantilly",
+    "Nossa Senhora Aparecida com Chantilly",
+    74.9,
+    nsChantilly,
+    1,
+  ),
+  faithProduct(
+    "fe-02",
+    "nossa-senhora-aparecida-parafina-gel",
+    "Nossa Senhora Aparecida — Parafina em Gel",
+    84.9,
+    nsGel,
+    2,
+  ),
   faithProduct("fe-03", "sagrada-familia", "Sagrada Família", 19.8, santinha1980, 3),
   faithProduct("fe-04", "santinha-19-80", "Santinha", 19.8, sagradaFamilia, 4),
   faithProduct("fe-05", "peonia", "Peônia", 19.8, peonia, 5),
@@ -56,7 +70,14 @@ export const faithProducts: Product[] = [
   faithProduct("fe-07", "anjinho-19-80", "Anjinho", 19.8, anjinho1980, 7),
   faithProduct("fe-08", "santinha-14-99-opcao-1", "Santinha", 14.99, santinha1499a, 8),
   faithProduct("fe-09", "anjinho-14-99-opcao-1", "Anjinho", 14.99, anjinho1499a, 9),
-  faithProduct("fe-10", "nossa-senhora-de-fatima", "Nossa Senhora de Fátima", 14.99, nossaSenhoraFatima, 10),
+  faithProduct(
+    "fe-10",
+    "nossa-senhora-de-fatima",
+    "Nossa Senhora de Fátima",
+    14.99,
+    nossaSenhoraFatima,
+    10,
+  ),
   faithProduct("fe-11", "anjinho-14-99-opcao-2", "Anjinho", 14.99, presepio, 11),
   faithProduct("fe-12", "presepio", "Presépio", 14.99, anjinho1499b, 12),
   faithProduct("fe-13", "kit-margaridas", "Kit Margaridas", 14.99, kitMargaridas, 13, "kits"),

@@ -7,7 +7,8 @@ export const INSTAGRAM_URL = "https://www.instagram.com/tresmarias.essencias/";
 export const formatBRL = (v: number) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }).replace(/\u00a0/g, " ");
 
-export const waLink = (text: string) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+export const waLink = (text: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
 export const itemLabel = (i: Pick<CartItem, "name" | "scent" | "model">) =>
   [i.name, i.model, i.scent].filter(Boolean).join(" - ");
@@ -33,6 +34,7 @@ export function buildOrderMessage(items: CartItem[]): string {
   ].join("\n");
 }
 
-export const generalMessage = "Olá! Vim pelo site da Três Marias Essências e gostaria de mais informações.";
+export const generalMessage =
+  "Olá! Vim pelo site da Três Marias Essências e gostaria de mais informações.";
 export const kitMessage =
   "Olá! Gostaria de montar um kit personalizado da Três Marias Essências para presente. Pode me ajudar?";

@@ -15,7 +15,13 @@ export const Route = createFileRoute("/produto/$slug")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.product;
-    if (!p) return { meta: [{ title: "Produto não encontrado | Três Marias" }, { name: "robots", content: "noindex" }] };
+    if (!p)
+      return {
+        meta: [
+          { title: "Produto não encontrado | Três Marias" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     const t = `${p.name} | Três Marias Essências`;
     return {
       meta: [
@@ -29,7 +35,17 @@ export const Route = createFileRoute("/produto/$slug")({
   component: ProductPage,
 });
 
-function Selector({ label, options, value, onChange }: { label: string; options: string[]; value?: string | undefined; onChange: (v: string) => void }) {
+function Selector({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: string[];
+  value?: string | undefined;
+  onChange: (v: string) => void;
+}) {
   return (
     <fieldset className="mt-8">
       <legend className="eyebrow mb-3">
@@ -43,7 +59,9 @@ function Selector({ label, options, value, onChange }: { label: string; options:
             aria-pressed={value === o}
             onClick={() => onChange(o)}
             className={`min-h-11 border px-5 text-sm transition-colors ${
-              value === o ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground"
+              value === o
+                ? "border-foreground bg-foreground text-background"
+                : "border-border hover:border-foreground"
             }`}
           >
             {o}
@@ -68,7 +86,15 @@ function ProductPage() {
   const valid = (!needsScent || scent) && (!needsModel || model);
   const size = p.volume ?? p.weight;
 
-  const item = () => ({ productId: p.id, name: p.name, price: p.price!, image: p.images[0] ?? "", scent, model, quantity: qty });
+  const item = () => ({
+    productId: p.id,
+    name: p.name,
+    price: p.price!,
+    image: p.images[0] ?? "",
+    scent,
+    model,
+    quantity: qty,
+  });
   const guard = () => {
     setTried(true);
     return !!valid;
@@ -76,7 +102,11 @@ function ProductPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-14">
-      <Link to="/produtos" search={{ categoria: p.category }} className="mb-6 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground">
+      <Link
+        to="/produtos"
+        search={{ categoria: p.category }}
+        className="mb-6 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground"
+      >
         <ChevronLeft className="size-4" /> {getCategory(p.category).name}
       </Link>
       <div className="grid gap-10 md:grid-cols-2 md:gap-16">
@@ -87,7 +117,12 @@ function ProductPage() {
           {p.images.length > 1 && (
             <div className="mt-3 flex gap-3">
               {p.images.map((src, i) => (
-                <button key={src} onClick={() => setActive(i)} aria-label={`Ver foto ${i + 1}`} className={`aspect-square w-20 overflow-hidden border-2 ${i === active ? "border-foreground" : "border-transparent opacity-70"}`}>
+                <button
+                  key={src}
+                  onClick={() => setActive(i)}
+                  aria-label={`Ver foto ${i + 1}`}
+                  className={`aspect-square w-20 overflow-hidden border-2 ${i === active ? "border-foreground" : "border-transparent opacity-70"}`}
+                >
                   <img src={src} alt="" className="h-full w-full object-cover" />
                 </button>
               ))}
@@ -102,22 +137,51 @@ function ProductPage() {
           <p className="mt-6 max-w-md leading-relaxed text-muted-foreground">{p.description}</p>
 
           {p.price === null ? (
-            <a href={waLink(kitMessage)} target="_blank" rel="noopener noreferrer" className="btn btn-solid mt-10 w-full sm:w-auto">
+            <a
+              href={waLink(kitMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-solid mt-10 w-full sm:w-auto"
+            >
               <WhatsAppIcon className="size-4" /> Montar meu kit pelo WhatsApp
             </a>
           ) : (
             <>
-              {needsModel && <Selector label="Modelo" options={p.availableModels} value={model} onChange={setModel} />}
-              {needsScent && <Selector label="Fragrância" options={p.availableScents} value={scent} onChange={setScent} />}
+              {needsModel && (
+                <Selector
+                  label="Modelo"
+                  options={p.availableModels}
+                  value={model}
+                  onChange={setModel}
+                />
+              )}
+              {needsScent && (
+                <Selector
+                  label="Fragrância"
+                  options={p.availableScents}
+                  value={scent}
+                  onChange={setScent}
+                />
+              )}
 
               <div className="mt-8">
                 <p className="eyebrow mb-3">Quantidade</p>
                 <div className="inline-flex items-center border border-border">
-                  <button className="grid size-11 place-items-center" aria-label="Diminuir quantidade" onClick={() => setQty((q) => Math.max(1, q - 1))}>
+                  <button
+                    className="grid size-11 place-items-center"
+                    aria-label="Diminuir quantidade"
+                    onClick={() => setQty((q) => Math.max(1, q - 1))}
+                  >
                     <Minus className="size-4" />
                   </button>
-                  <span className="w-10 text-center" aria-live="polite">{qty}</span>
-                  <button className="grid size-11 place-items-center" aria-label="Aumentar quantidade" onClick={() => setQty((q) => Math.min(99, q + 1))}>
+                  <span className="w-10 text-center" aria-live="polite">
+                    {qty}
+                  </span>
+                  <button
+                    className="grid size-11 place-items-center"
+                    aria-label="Aumentar quantidade"
+                    onClick={() => setQty((q) => Math.min(99, q + 1))}
+                  >
                     <Plus className="size-4" />
                   </button>
                 </div>
@@ -125,7 +189,9 @@ function ProductPage() {
 
               {tried && !valid && (
                 <p role="alert" className="mt-5 text-sm text-destructive">
-                  Selecione {needsModel && !model ? "o modelo" : ""}{needsModel && !model && needsScent && !scent ? " e " : ""}{needsScent && !scent ? "a fragrância" : ""} para continuar.
+                  Selecione {needsModel && !model ? "o modelo" : ""}
+                  {needsModel && !model && needsScent && !scent ? " e " : ""}
+                  {needsScent && !scent ? "a fragrância" : ""} para continuar.
                 </p>
               )}
 

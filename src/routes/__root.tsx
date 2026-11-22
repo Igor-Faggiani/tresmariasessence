@@ -70,7 +70,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Três Marias Essências | Body Splash, Velas Aromáticas e Presentes" },
-      { name: "description", content: "Body splashes, velas aromáticas, wax melts e kits personalizados. Peça pelo WhatsApp." },
+      {
+        name: "description",
+        content:
+          "Body splashes, velas aromáticas, wax melts e kits personalizados. Peça pelo WhatsApp.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -111,7 +115,10 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <CartProvider>
-        <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-background focus:p-3">
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-background focus:p-3"
+        >
           Pular para o conteúdo
         </a>
         <Header />

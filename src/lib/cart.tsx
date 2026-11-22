@@ -1,4 +1,12 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 import type { CartItem } from "@/types/product";
 import { cartTotal } from "./whatsapp";
 
@@ -49,7 +57,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const key = [item.productId, item.model ?? "", item.scent ?? ""].join("|");
     setItems((prev) => {
       const found = prev.find((p) => p.key === key);
-      if (found) return prev.map((p) => (p.key === key ? { ...p, quantity: p.quantity + item.quantity } : p));
+      if (found)
+        return prev.map((p) =>
+          p.key === key ? { ...p, quantity: p.quantity + item.quantity } : p,
+        );
       return [...prev, { ...item, key }];
     });
     setNotice(`${item.name} adicionado à sacola`);
@@ -57,10 +68,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const setQty = useCallback(
     (key: string, q: number) =>
-      setItems((prev) => prev.map((p) => (p.key === key ? { ...p, quantity: Math.max(1, Math.min(99, q)) } : p))),
+      setItems((prev) =>
+        prev.map((p) => (p.key === key ? { ...p, quantity: Math.max(1, Math.min(99, q)) } : p)),
+      ),
     [],
   );
-  const remove = useCallback((key: string) => setItems((prev) => prev.filter((p) => p.key !== key)), []);
+  const remove = useCallback(
+    (key: string) => setItems((prev) => prev.filter((p) => p.key !== key)),
+    [],
+  );
   const clear = useCallback(() => setItems([]), []);
 
   const value = useMemo(

@@ -1,7 +1,12 @@
 /** As três estrelas da marca, ligadas por pontos. Puramente decorativo. */
 export function Constellation({ className = "" }: { className?: string }) {
   const star = (x: number, y: number, r: number) => (
-    <g transform={`translate(${x} ${y})`} stroke="currentColor" strokeWidth="1" strokeLinecap="round">
+    <g
+      transform={`translate(${x} ${y})`}
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+    >
       <line x1={-r} y1="0" x2={r} y2="0" />
       <line x1="0" y1={-r} x2="0" y2={r} />
       <line x1={-r * 0.6} y1={-r * 0.6} x2={r * 0.6} y2={r * 0.6} />
