@@ -111,7 +111,7 @@ export const products: Product[] = [
   {
     id: "p8",
     slug: "vela-aromatica-anjo-personalizada",
-    name: "Vela Aromática Anjo — Personalizada",
+    name: "Vela Aromática - Anjo Personalizada",
     category: "velas",
     description: "Vela aromática em formato de anjo, apresentada em recipiente de vidro e personalizada. Escolha a essência desejada.",
     price: 41.8,

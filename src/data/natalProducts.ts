@@ -13,6 +13,8 @@ import arvoreChantillyVariante from "@/assets/natal/atualizados/arvore-chantilly
 import panetonneCopo from "@/assets/natal/atualizados/panetonne-copo.webp";
 import parafinaGelFolhaOuro from "@/assets/natal/atualizados/parafina-gel-folha-ouro.webp";
 import vilaNatalGesso from "@/assets/natal/atualizados/vila-natal-gesso.webp";
+import caixaPapaiNoel from "@/assets/natal/atualizados/caixa_papai_noel.jpg";
+import vilaNatalGesso2 from "@/assets/natal/atualizados/vila_natal_gesso_2.jpg";
 
 export const CHRISTMAS_SCENTS = [
   "Panetonne",
@@ -81,7 +83,7 @@ export const natalProducts: Product[] = [
     category: "velas",
     description: "Vela aromática temática de Papai Noel, acompanhada de embalagem para presente.",
     price: 19.8,
-    images: [papaiNoel],
+    images: [caixaPapaiNoel],
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
     featured: true,
@@ -159,7 +161,7 @@ export const natalProducts: Product[] = [
     name: "Vela Aromática — Parafina em Gel com Folha de Ouro",
     category: "velas",
     description: "Vela aromática de parafina em gel no copo de whisky, com detalhe de folha de ouro.",
-    price: 78.99,
+    price: 79.80,
     images: [parafinaGelFolhaOuro],
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
@@ -173,7 +175,7 @@ export const natalProducts: Product[] = [
     category: "velas",
     description: "Vela aromática em vaso de gesso com cenário de Vila de Natal, urso polar e chantilly.",
     price: 99.9,
-    images: [vilaNatalGesso],
+    images: [vilaNatalGesso, vilaNatalGesso2],
     availableScents: CHRISTMAS_SCENTS,
     availableModels: [],
     featured: true,
