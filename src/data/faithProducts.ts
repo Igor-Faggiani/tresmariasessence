@@ -34,6 +34,7 @@ const faithProduct = (
   category: "velas" | "kits" = "velas",
 ): Product => ({
   id,
+  collection: "faith",
   slug,
   name,
   category,

@@ -1,4 +1,4 @@
-import type { Category, CategoryId, Product } from "@/types/product";
+import type { Category, CategoryId, CollectionId, Product } from "@/types/product";
 import { img } from "./images";
 import { natalProducts } from "./natalProducts";
 import { faithProducts } from "./faithProducts";
@@ -19,6 +19,7 @@ export const products: Product[] = [
     slug: "body-splash-200ml",
     name: "Body Splash 200ml",
     category: "body-splash",
+    collection: "standard",
     description: "Body splash de fragrância delicada para perfumar a pele ao longo do dia.",
     price: 57.95,
     images: [img.splashTall200, img.splashGoodGirl200b, img.splashFamily],
@@ -33,6 +34,7 @@ export const products: Product[] = [
     slug: "body-splash-100ml",
     name: "Body Splash 100ml",
     category: "body-splash",
+    collection: "standard",
     description: "A mesma fragrância delicada em tamanho prático para levar na bolsa.",
     price: 28.95,
     images: [img.splashVanilla100, img.splashMorango100, img.splashFamily],
@@ -47,6 +49,7 @@ export const products: Product[] = [
     slug: "vela-aromatica-copo-de-whisky",
     name: "Vela Aromática — Copo de Whisky",
     category: "velas",
+    collection: "standard",
     description: "Vela aromática em copo de vidro com tampa de madeira.",
     price: 59.9,
     images: [img.copoWhisky, img.copoOpen],
@@ -60,6 +63,7 @@ export const products: Product[] = [
     slug: "vela-aromatica-lata",
     name: "Vela Aromática — Lata",
     category: "velas",
+    collection: "standard",
     description: "Vela aromática em lata metálica com tampa.",
     price: 40,
     images: [img.lataBlack, img.lataBlackOpen],
@@ -73,6 +77,7 @@ export const products: Product[] = [
     slug: "vela-aromatica-latinha",
     name: "Vela Aromática — Latinha",
     category: "velas",
+    collection: "standard",
     description: "Vela aromática em latinha pequena, ótima para lembrancinhas.",
     price: 7.99,
     images: [img.latinhasSilver, img.latinhaOpen],
@@ -86,6 +91,7 @@ export const products: Product[] = [
     slug: "wax-melts-30g",
     name: "Wax Melts 30g",
     category: "wax-melts",
+    collection: "standard",
     description: "Pastilhas de cera aromática para usar em rechaud e perfumar o ambiente.",
     price: 20.9,
     images: [img.waxCoracao, img.waxCapivara],
@@ -100,6 +106,7 @@ export const products: Product[] = [
     slug: "kit-personalizado",
     name: "Kit Personalizado",
     category: "kits",
+    collection: "standard",
     description: "Kits personalizados para presentear. Escolha os produtos e fragrâncias e monte a composição pelo WhatsApp.",
     price: null,
     images: [img.kitA, img.kitB],
@@ -113,6 +120,7 @@ export const products: Product[] = [
     slug: "vela-aromatica-anjo-personalizada",
     name: "Vela Aromática - Anjo Personalizada",
     category: "velas",
+    collection: "standard",
     description: "Vela aromática em formato de anjo, apresentada em recipiente de vidro e personalizada. Escolha a essência desejada.",
     price: 41.8,
     images: [img.velaAnjo, img.velaAnjoDetalhe],
@@ -123,6 +131,15 @@ export const products: Product[] = [
   },
 ];
 
-export const getProductBySlug = (slug: string) => [...products, ...natalProducts, ...faithProducts].find((p) => p.slug === slug);
+export const collections: { id: CollectionId; name: string; description: string }[] = [
+  { id: "standard", name: "Tradicional", description: "Produtos da linha permanente da Três Marias Essências." },
+  { id: "faith", name: "Coleção Fé", description: "Peças delicadas feitas para presentear, acolher e marcar momentos especiais." },
+  { id: "christmas", name: "Especial de Natal", description: "Presentes aromáticos para deixar o Natal ainda mais especial." },
+];
+
+export const allProducts: Product[] = [...products, ...faithProducts, ...natalProducts];
+
+export const getProductBySlug = (slug: string) => allProducts.find((p) => p.slug === slug);
 export const getCategory = (id: CategoryId) => categories.find((c) => c.id === id)!;
 export const categoryIds = categories.map((c) => c.id);
+export const collectionIds = collections.map((c) => c.id);
