@@ -1,4 +1,11 @@
 export type CategoryId = "body-splash" | "velas" | "wax-melts" | "kits";
+export type CollectionId = "standard" | "faith" | "christmas";
+
+export const collectionLabels: Record<CollectionId, string> = {
+  standard: "Tradicional",
+  faith: "Coleção Fé",
+  christmas: "Especial de Natal",
+};
 
 export interface Category {
   id: CategoryId;
@@ -9,6 +16,7 @@ export interface Category {
 
 export interface Product {
   id: string;
+  collection: CollectionId;
   slug: string;
   name: string;
   category: CategoryId;

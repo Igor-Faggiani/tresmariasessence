@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import type { Product } from "@/types/product";
+import { collectionLabels, type Product } from "@/types/product";
 import { formatBRL, waLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -30,6 +30,9 @@ export function ProductCard({ product }: { product: Product }) {
         )}
       </Link>
       <div className="flex flex-1 flex-col pt-4">
+        <p className="mb-1 w-fit border border-border px-2 py-1 text-[0.55rem] uppercase tracking-[0.13em] text-muted-foreground">
+          {collectionLabels[product.collection]}
+        </p>
         {size && <p className="eyebrow">{size}</p>}
         <h3 className="mt-1 text-lg leading-snug md:text-xl">
           <Link to="/produto/$slug" params={{ slug: product.slug }} className="hover:text-cocoa">

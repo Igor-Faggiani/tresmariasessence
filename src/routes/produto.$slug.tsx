@@ -76,7 +76,7 @@ function ProductPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 md:py-14">
-      <Link to="/produtos" search={{ categoria: p.category }} className="mb-6 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground">
+      <Link to="/produtos" search={{ categoria: p.category, colecao: p.collection }} className="mb-6 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground">
         <ChevronLeft className="size-4" /> {getCategory(p.category).name}
       </Link>
       <div className="grid gap-10 md:grid-cols-2 md:gap-16">
